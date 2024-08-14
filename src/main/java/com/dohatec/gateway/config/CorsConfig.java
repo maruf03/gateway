@@ -17,7 +17,7 @@ public class CorsConfig {
     private static final String MAX_AGE = "7200"; //2 hours (2 * 60 * 60)
 
     @Bean
-    private CorsWebFilter corsFilter() {
+    public CorsWebFilter corsFilter() {
         CorsConfiguration corsConfig = new CorsConfiguration();
         corsConfig.setAllowedOriginPatterns(List.of("*"));
         corsConfig.setAllowedMethods(ALLOWED_METHODS);
